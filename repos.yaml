@@ -1,0 +1,21 @@
+repositories:
+  src/kitcar-common:
+    type: git
+    url: git@git.kitcar-team.de:kitcar/kitcar-common.git
+    version: main
+  src/kitcar-interfaces:
+    type: git
+    url: git@git.kitcar-team.de:kitcar/kitcar-interfaces.git
+    version: main
+  src/kitcar-perception:
+    type: git
+    url: git@git.kitcar-team.de:kitcar/kitcar-perception.git
+    version: main
+  src/kitcar-ros:
+    type: git
+    url: git@git.kitcar-team.de:kitcar/kitcar-ros.git
+    version: ros2_master
+  src/trajectory_visualization:
+    type: git
+    url: git@github.com:AlexanderHauf/trajectory_visualization.git
+    version: humble
