@@ -1,5 +1,10 @@
-src/*
-!src/.gitkeep
 build
 install
 log
+src/kitcar-common
+src/kitcar-debugger
+src/kitcar-interfaces
+src/kitcar-perception
+src/kitcar-ros
+src/kitcar-vehicle-description
+src/trajectory_visualization
