@@ -7,4 +7,7 @@ src/kitcar-interfaces
 src/kitcar-perception
 src/kitcar-ros
 src/kitcar-vehicle-description
+src/kitcar-notker
 src/trajectory_visualization
+src/external/BehaviorTree.CPP
+src/external/BehaviorTree.ROS2
