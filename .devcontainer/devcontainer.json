@@ -3,6 +3,11 @@
   "privileged": true,
   "remoteUser": "kitcar",
   "image": "osrf/ros:humble-desktop-full",
+  "build": {
+    "options": {
+      "pull": true
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/common-utils:1": {
       "version": "latest",
@@ -12,7 +17,7 @@
       "userGid": "1000"
     },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages":  "stow,tmux,ripgrep,python3-venv,python3-virtualenv"
+      "packages": "stow,tmux,ripgrep,python3-venv,python3-virtualenv"
     },
   },
   "workspaceFolder": "/home/kitcar/ws",
@@ -46,6 +51,7 @@
     }
   ],
   "postCreateCommand": {
+    "vcs-import": "vcs import < repos.yaml",
     "rosdep": "sudo apt update && rosdep update && rosdep install --from-paths src --ignore-src -y",
     "video-group": "sudo usermod -aG video kitcar",
   }
