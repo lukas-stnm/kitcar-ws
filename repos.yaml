@@ -31,11 +31,11 @@ repositories:
     type: git
     url: git@git.kitcar-team.de:kitcar/kitcar_notker
     version: main
-  src/external/BehaviorTree.CPP:
+  src/external/src/BehaviorTree.CPP:
     type: git
     url: git@github.com:BehaviorTree/BehaviorTree.CPP.git
     version: master
-  src/external/BehaviorTree.ROS2:
+  src/external/src/BehaviorTree.ROS2:
     type: git
     url: git@github.com:BehaviorTree/BehaviorTree.ROS2.git
     version: humble

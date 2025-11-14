@@ -52,6 +52,7 @@
   ],
   "postCreateCommand": {
     "vcs-import": "vcs import < repos.yaml",
+    "zshrc": "echo 'source /opt/ros/humble/setup.zsh\nsource /home/kitcar/ws/install/setup.zsh' >> ~/.zshrc",
     "rosdep": "sudo apt update && rosdep update && rosdep install --from-paths src --ignore-src -y",
     "video-group": "sudo usermod -aG video kitcar",
   }
