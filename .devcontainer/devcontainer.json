@@ -18,7 +18,7 @@
     },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "stow,tmux,ripgrep,python3-venv,python3-virtualenv"
-    },
+    }
   },
   "workspaceFolder": "/home/kitcar/ws",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/kitcar/ws,type=bind",
@@ -40,6 +40,6 @@
     "vcs-import": "vcs import < repos.yaml",
     "zshrc": "echo 'source /opt/ros/humble/setup.zsh\n[ -f /home/kitcar/ws/install/setup.zsh ] && source /home/kitcar/ws/install/setup.zsh' >> ~/.zshrc",
     "rosdep": "sudo apt update && rosdep update && rosdep install --from-paths src --ignore-src -y",
-    "video-group": "sudo usermod -aG video kitcar",
+    "video-group": "sudo usermod -aG video kitcar"
   }
 }
