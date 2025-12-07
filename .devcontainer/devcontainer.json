@@ -26,15 +26,8 @@
     "ROS_LOCALHOST_ONLY": "1"
   },
   "runArgs": [
-    "--net=host"
-  ],
-  "mounts": [
-    {
-      "source": "/dev/shm",
-      "target": "/dev/shm",
-      "type": "bind",
-      "consistency": "cached"
-    }
+    "--net=host",
+    "--shm-size=1g"
   ],
   "postCreateCommand": {
     "vcs-import": "vcs import < repos.yaml",
