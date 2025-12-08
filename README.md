@@ -30,9 +30,39 @@ This will build the workspace and make you ready for development.
 
 ***
 
-## **SSH Agent Forwarding**
+## Adressing problems: **SSH**
 
-Private repos require SSH keys. VS Code can forward your host SSH agent into the container.
+If the devcontainer cannot be started, the reason is often because there are problems with ssh-authentication
+and cloning the required repos during the devcontainer setup.
+
+Because of the way vscode displays logs, it often doesn't even report the error messages to you.
+If you cannot build the devcontainer and you don't know why, firts try these steps.
+
+### Authenticity of host cannot be established
+If you have never connected to `git.kitcar-team.de` via ssh, the devcontainer will not build.
+To mitigate this, in a fresh windows-terminal, run:
+`ssh -T git@git.kitcar-team.de`
+
+You should see a message like:
+
+    The authenticity of host 'git.kitcar-team.de (173.249.38.174)' can't be established.
+    ED25519 key fingerprint is: SHA256:nsLkJgu6EPa54dYbLlbF+I00E50u3LC5b518TMXjMJM
+    This key is not known by any other names.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+    
+Answer `yes`!
+Then, you should see a message like
+
+    Welcome to GitLab, <username>!
+    Hi <username>! You've successfully authenticated with GitHub.
+
+If something fails, make sure that you have properly registered your ssh key on the GitLab.
+
+In case it worked, try following the steps above again and see if the devcontainer builds this time.
+
+### SSH agent forwarding
+Sometimes, vscode can't forward the ssh agent from the windows into the devcontainer.
+In this case, follow the steps below in order to enable it.
 
 **Important:** Make sure the SSH key you add is the one **registered with GitHub and GitLab** for your account.
 
