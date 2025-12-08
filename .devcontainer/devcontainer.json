@@ -27,7 +27,8 @@
   },
   "runArgs": [
     "--net=host",
-    "--shm-size=1g"
+    "--pid=host",
+    "--ipc=host"
   ],
   "postCreateCommand": {
     "vcs-import": "vcs import < repos.yaml",
