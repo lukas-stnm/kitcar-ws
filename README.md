@@ -23,8 +23,8 @@ Then click **Reopen in Container** when prompted. The container will set up the 
 Now, open a terminal in vscode.
 Running the command `pwd` should print _kitcar_.
 Make sure that you're terminal is located in `~/ws` and run the command
-```
-colcon build  
+```bash
+colcon build --symlink-install
 ```
 This will build the workspace and make you ready for development.
 
