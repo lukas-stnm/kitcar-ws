@@ -92,7 +92,7 @@ private:
 
     auto drive_msg = geometry_msgs::msg::Twist();
     drive_msg.linear.x = 2.4; 
-    drive_msg.angular.z = 4.5 * steering_angle;
+    drive_msg.angular.z = 4.5 * steering_angle; 
 
     publisher_->publish(drive_msg);
   }
